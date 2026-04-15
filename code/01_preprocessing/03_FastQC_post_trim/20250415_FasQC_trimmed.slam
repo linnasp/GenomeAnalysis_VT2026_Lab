@@ -1,0 +1,20 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2026-1-61
+#SBATCH -p pelle
+#SBATCH -c 1
+#SBATCH -t 00:30:00
+#SBATCH -J FastQC_trimmed
+#SBATCH --mail-type=ALL
+#SBATCH --output=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/01_preprocessing/03_FastQC_post_trim/outputfiles/%x.%j.out
+#SBATCH --error=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/01_preprocessing/03_FastQC_post_trim/errorfiles/%x.%j.err
+
+# Load modules
+
+module load FastQC/0.12.1-Java-17
+
+# Your commands
+
+fastqc -t 1 \
+-o /home/linnasp/GenomeAnalysis_VT2026_Lab/results/01_preprocessing/03_FastQC_post_trim \
+/home/linnasp/GenomeAnalysis_VT2026_Lab/results/01_preprocessing/02_Trimmomatic/output_forward_paired.fq.gz \
+/home/linnasp/GenomeAnalysis_VT2026_Lab/results/01_preprocessing/02_Trimmomatic/output_reverse_paired.fq.gz 

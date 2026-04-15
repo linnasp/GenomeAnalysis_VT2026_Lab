@@ -18,4 +18,4 @@ trimmomatic PE -threads 2 \
 /home/linnasp/GenomeAnalysis_VT2026_Lab/results/01_preprocessing/02_Trimmomatic/output_forward_unpaired.fq.gz \
 /home/linnasp/GenomeAnalysis_VT2026_Lab/results/01_preprocessing/02_Trimmomatic/output_reverse_paired.fq.gz \
 /home/linnasp/GenomeAnalysis_VT2026_Lab/results/01_preprocessing/02_Trimmomatic/output_reverse_unpaired.fq.gz \
-ILLUMINACLIP:TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 \
+ILLUMINACLIP:$TRIMMOMATIC_HOME/adapters/TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 \
