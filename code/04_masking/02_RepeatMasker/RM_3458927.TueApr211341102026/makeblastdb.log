@@ -1,0 +1,11 @@
+
+
+Building a new DB, current time: 04/21/2026 13:41:12
+New DB name:   /gorilla/home/linnasp/GenomeAnalysis_VT2026_Lab/code/04_masking/02_RepeatMasker/RM_3458927.TueApr211341102026/N_japonicum_db-families.fa
+New DB title:  /home/linnasp/GenomeAnalysis_VT2026_Lab/results/04_masking/01_RepeatModeler/3_run/N_japonicum_db-families.fa
+Sequence type: Nucleotide
+Keep MBits: T
+Maximum file size: 3000000000B
+Adding sequences from FASTA; added 154 sequences in 0.00633311 seconds.
+
+
