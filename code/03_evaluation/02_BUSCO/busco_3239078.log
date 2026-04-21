@@ -1,0 +1,179 @@
+2026-04-21 11:53:57 DEBUG:busco.run_BUSCO	Command line: /sw/arch/eb/software/BUSCO/5.8.2-gfbf-2024a/bin/busco -i /home/linnasp/GenomeAnalysis_VT2026_Lab/results/02_assembly/04_Pilon/pilon.fasta -l embryophyta_odb10 -c 2 -o busco_6 --out_path /home/linnasp/GenomeAnalysis_VT2026_Lab/results/03_evaluation/02_BUSCO -m genome --augustus
+2026-04-21 11:53:57 INFO:busco.run_BUSCO	***** Start a BUSCO v5.8.2 analysis, current time: 04/21/2026 11:53:57 *****
+2026-04-21 11:53:57 DEBUG:busco.ConfigManager	Getting config file
+2026-04-21 11:53:57 INFO:busco.ConfigManager	Configuring BUSCO with /sw/arch/eb/software/BUSCO/5.8.2-gfbf-2024a/config/config.ini
+2026-04-21 11:53:57 INFO:busco.BuscoConfig	Running genome mode
+2026-04-21 11:53:57 INFO:busco.BuscoDownloadManager	Downloading information on latest versions of BUSCO data...
+2026-04-21 11:53:57 DEBUG:busco.BuscoConfig	State of BUSCO config before run:
+2026-04-21 11:53:57 DEBUG:busco.BuscoConfig	{'_allow_no_value': False,
+ '_comment_prefixes': ('#', ';'),
+ '_converters': <configparser.ConverterMapping object at 0x14a81df79880>,
+ '_defaults': {},
+ '_delimiters': ('=', ':'),
+ '_dict': <class 'dict'>,
+ '_empty_lines_in_values': True,
+ '_inline_comment_prefixes': (),
+ '_input_filepath': '/home/linnasp/GenomeAnalysis_VT2026_Lab/results/02_assembly/04_Pilon/pilon.fasta',
+ '_interpolation': <configparser.BasicInterpolation object at 0x14ab25c3bb30>,
+ '_mode': 'genome',
+ '_optcre': re.compile('\n        (?P<option>.*?)                    # very permissive!\n        \\s*(?P<vi>=|:)\\s*              # any number of space/tab,\n                                           # followed by any of t, re.VERBOSE),
+ '_proxies': {'DEFAULT': <Section: DEFAULT>,
+              'augustus': <Section: augustus>,
+              'bbtools': <Section: bbtools>,
+              'busco_run': <Section: busco_run>,
+              'etraining': <Section: etraining>,
+              'gff2gbSmallDNA.pl': <Section: gff2gbSmallDNA.pl>,
+              'hmmsearch': <Section: hmmsearch>,
+              'makeblastdb': <Section: makeblastdb>,
+              'metaeuk': <Section: metaeuk>,
+              'miniprot': <Section: miniprot>,
+              'new_species.pl': <Section: new_species.pl>,
+              'optimize_augustus.pl': <Section: optimize_augustus.pl>,
+              'prodigal': <Section: prodigal>,
+              'sepp': <Section: sepp>,
+              'tblastn': <Section: tblastn>},
+ '_sections': {'augustus': {'command': 'augustus', 'path': ''},
+               'bbtools': {'command': 'stats.sh', 'path': ''},
+               'busco_run': {'auto-lineage': 'False',
+                             'auto-lineage-euk': 'False',
+                             'auto-lineage-prok': 'False',
+                             'batch_mode': 'False',
+                             'cpu': '2',
+                             'datasets_version': 'odb10',
+                             'download_base_url': 'https://busco-data.ezlab.org/v5/data/',
+                             'download_path': '/sw/data/local/BUSCO_Data/v5',
+                             'force': 'False',
+                             'in': '/home/linnasp/GenomeAnalysis_VT2026_Lab/results/02_assembly/04_Pilon/pilon.fasta',
+                             'lineage_dataset': 'embryophyta_odb10',
+                             'main_out': '/home/linnasp/GenomeAnalysis_VT2026_Lab/results/03_evaluation/02_BUSCO/busco_6',
+                             'mode': 'genome',
+                             'offline': 'True',
+                             'opt-out-run-stats': 'False',
+                             'out': 'busco_6',
+                             'out_path': '/home/linnasp/GenomeAnalysis_VT2026_Lab/results/03_evaluation/02_BUSCO',
+                             'quiet': 'False',
+                             'restart': 'False',
+                             'skip_bbtools': 'False',
+                             'tar': 'False',
+                             'use_augustus': 'True',
+                             'use_metaeuk': 'False',
+                             'use_miniprot': 'False'},
+               'etraining': {'command': 'etraining', 'path': ''},
+               'gff2gbSmallDNA.pl': {'command': 'gff2gbSmallDNA.pl',
+                                     'path': ''},
+               'hmmsearch': {'command': 'hmmsearch', 'path': ''},
+               'makeblastdb': {'command': 'makeblastdb', 'path': ''},
+               'metaeuk': {'command': 'metaeuk', 'path': ''},
+               'miniprot': {'command': 'miniprot', 'path': ''},
+               'new_species.pl': {'command': 'new_species.pl', 'path': ''},
+               'optimize_augustus.pl': {'command': 'optimize_augustus.pl',
+                                        'path': ''},
+               'prodigal': {'command': 'prodigal', 'path': ''},
+               'sepp': {'command': 'run_sepp.py', 'path': ''},
+               'tblastn': {'command': 'tblastn', 'path': ''}},
+ '_strict': True,
+ 'conf_file': '/sw/arch/eb/software/BUSCO/5.8.2-gfbf-2024a/config/config.ini',
+ 'default_section': 'DEFAULT',
+ 'downloader': <busco.BuscoDownloadManager.BuscoDownloadManager object at 0x14a81df33bc0>,
+ 'main_out': '/home/linnasp/GenomeAnalysis_VT2026_Lab/results/03_evaluation/02_BUSCO/busco_6',
+ 'params': {'augustus_parameters': None,
+            'augustus_species': None,
+            'auto-lineage': False,
+            'auto-lineage-euk': False,
+            'auto-lineage-prok': False,
+            'config_file': None,
+            'contig_break': None,
+            'cpu': 2,
+            'datasets_version': None,
+            'download': '==SUPPRESS==',
+            'download_base_url': None,
+            'download_path': None,
+            'evalue': None,
+            'force': False,
+            'help': '==SUPPRESS==',
+            'in': '/home/linnasp/GenomeAnalysis_VT2026_Lab/results/02_assembly/04_Pilon/pilon.fasta',
+            'limit': None,
+            'lineage_dataset': 'embryophyta_odb10',
+            'list_datasets': '==SUPPRESS==',
+            'long': False,
+            'metaeuk_parameters': None,
+            'metaeuk_rerun_parameters': None,
+            'mode': 'genome',
+            'offline': False,
+            'opt-out-run-stats': False,
+            'out': 'busco_6',
+            'out_path': '/home/linnasp/GenomeAnalysis_VT2026_Lab/results/03_evaluation/02_BUSCO',
+            'quiet': False,
+            'restart': False,
+            'scaffold_composition': False,
+            'skip_bbtools': False,
+            'tar': False,
+            'use_augustus': True,
+            'use_metaeuk': False,
+            'use_miniprot': False,
+            'version': '==SUPPRESS=='},
+ 'run_stats': {'cpu': 2,
+               'input_file_size': 17065559,
+               'lineage_dataset': ['embryophyta_odb10'],
+               'mode': 'genome',
+               'use_augustus': True}}
+2026-04-21 11:53:57 INFO:busco.BuscoRunner	Input file is /home/linnasp/GenomeAnalysis_VT2026_Lab/results/02_assembly/04_Pilon/pilon.fasta
+2026-04-21 11:53:57 DEBUG:busco.analysis.BuscoAnalysis	Check all required tools are accessible...
+2026-04-21 11:54:15 DEBUG:busco.analysis.BuscoAnalysis	Checking dataset for HMM profiles
+2026-04-21 11:54:15 INFO:busco.analysis.BuscoAnalysis	Running BUSCO using lineage dataset embryophyta_odb10 (eukaryota, 2024-01-08)
+2026-04-21 11:54:15 INFO:busco.busco_tools.Toolset	Running 1 job(s) on bbtools, starting at 04/21/2026 11:54:15
+2026-04-21 11:54:16 INFO:numexpr.utils	Note: detected 96 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2026-04-21 11:54:16 INFO:numexpr.utils	Note: detected 96 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2026-04-21 11:54:16 INFO:numexpr.utils	Note: NumExpr detected 96 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-04-21 11:54:16 INFO:numexpr.utils	Note: NumExpr detected 96 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-04-21 11:54:16 INFO:numexpr.utils	NumExpr defaulting to 8 threads.
+2026-04-21 11:54:16 INFO:numexpr.utils	NumExpr defaulting to 8 threads.
+2026-04-21 11:54:16 DEBUG:busco.busco_tools.Toolset	cmd call: stats.sh format=2 in=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/02_assembly/04_Pilon/pilon.fasta n=10
+2026-04-21 11:54:17 INFO:busco.busco_tools.Toolset	[bbtools]	1 of 1 task(s) completed
+2026-04-21 11:54:17 DEBUG:busco.busco_tools.base	Tool: makeblastdb
+2026-04-21 11:54:17 DEBUG:busco.busco_tools.base	Version: 2.16.0+
+2026-04-21 11:54:17 INFO:busco.busco_tools.Toolset	Running 1 job(s) on makeblastdb, starting at 04/21/2026 11:54:17
+2026-04-21 11:54:17 INFO:numexpr.utils	Note: detected 96 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2026-04-21 11:54:17 INFO:numexpr.utils	Note: NumExpr detected 96 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-04-21 11:54:17 INFO:numexpr.utils	NumExpr defaulting to 8 threads.
+2026-04-21 11:54:17 INFO:numexpr.utils	Note: detected 96 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2026-04-21 11:54:17 INFO:numexpr.utils	Note: NumExpr detected 96 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-04-21 11:54:17 INFO:numexpr.utils	NumExpr defaulting to 8 threads.
+2026-04-21 11:54:17 INFO:busco.busco_tools.blast	Creating BLAST database with input file
+2026-04-21 11:54:17 DEBUG:busco.busco_tools.Toolset	cmd call: makeblastdb -in /home/linnasp/GenomeAnalysis_VT2026_Lab/results/02_assembly/04_Pilon/pilon.fasta -dbtype nucl -out /home/linnasp/GenomeAnalysis_VT2026_Lab/results/03_evaluation/02_BUSCO/busco_6/blast_db/pilon.fasta
+2026-04-21 11:54:29 INFO:busco.busco_tools.Toolset	[makeblastdb]	1 of 1 task(s) completed
+2026-04-21 11:54:29 INFO:busco.busco_tools.blast	Running a BLAST search for BUSCOs against created database
+2026-04-21 11:54:29 DEBUG:busco.busco_tools.base	Tool: tblastn
+2026-04-21 11:54:29 DEBUG:busco.busco_tools.base	Version: 2.16.0+
+2026-04-21 11:54:29 INFO:busco.busco_tools.Toolset	Running 1 job(s) on tblastn, starting at 04/21/2026 11:54:29
+2026-04-21 11:54:29 INFO:numexpr.utils	Note: detected 96 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2026-04-21 11:54:29 INFO:numexpr.utils	Note: detected 96 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2026-04-21 11:54:29 INFO:numexpr.utils	Note: NumExpr detected 96 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-04-21 11:54:29 INFO:numexpr.utils	Note: NumExpr detected 96 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-04-21 11:54:29 INFO:numexpr.utils	NumExpr defaulting to 8 threads.
+2026-04-21 11:54:29 INFO:numexpr.utils	NumExpr defaulting to 8 threads.
+2026-04-21 11:54:29 DEBUG:busco.busco_tools.Toolset	cmd call: tblastn -evalue 0.001 -num_threads 2 -query /sw/data/local/BUSCO_Data/v5/lineages/embryophyta_odb10/ancestral -db /home/linnasp/GenomeAnalysis_VT2026_Lab/results/03_evaluation/02_BUSCO/busco_6/blast_db/pilon.fasta -out /home/linnasp/GenomeAnalysis_VT2026_Lab/results/03_evaluation/02_BUSCO/busco_6/run_embryophyta_odb10/blast_output/tblastn.tsv -outfmt 7
+2026-04-21 11:56:03 INFO:busco.busco_tools.Toolset	[tblastn]	1 of 1 task(s) completed
+2026-04-21 11:56:04 INFO:busco.analysis.GenomeAnalysis	Running Augustus gene predictor on BLAST search results.
+2026-04-21 11:56:04 INFO:busco.busco_tools.augustus	Running Augustus prediction using arabidopsis as species:
+2026-04-21 11:56:04 DEBUG:busco.busco_tools.base	Tool: augustus
+2026-04-21 11:56:04 DEBUG:busco.busco_tools.base	Version: 3.5.0
+2026-04-21 11:56:04 INFO:busco.busco_tools.Toolset	Running 704 job(s) on augustus, starting at 04/21/2026 11:56:04
+2026-04-21 11:56:04 INFO:numexpr.utils	Note: detected 96 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2026-04-21 11:56:04 INFO:numexpr.utils	Note: detected 96 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2026-04-21 11:56:04 INFO:numexpr.utils	Note: NumExpr detected 96 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-04-21 11:56:04 INFO:numexpr.utils	Note: NumExpr detected 96 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-04-21 11:56:04 INFO:numexpr.utils	NumExpr defaulting to 8 threads.
+2026-04-21 11:56:04 INFO:numexpr.utils	NumExpr defaulting to 8 threads.
+2026-04-21 11:56:04 DEBUG:busco.busco_tools.Toolset	cmd call: augustus --codingseq=1 --proteinprofile=/sw/data/local/BUSCO_Data/v5/lineages/embryophyta_odb10/prfl/37412at3193.prfl --predictionStart=1287553 --predictionEnd=1351520 --species=arabidopsis /home/linnasp/GenomeAnalysis_VT2026_Lab/results/03_evaluation/02_BUSCO/busco_6/run_embryophyta_odb10/blast_output/sequences/contig_45_pilon.temp
+2026-04-21 11:56:04 DEBUG:busco.busco_tools.Toolset	cmd call: augustus --codingseq=1 --proteinprofile=/sw/data/local/BUSCO_Data/v5/lineages/embryophyta_odb10/prfl/45818at3193.prfl --predictionStart=3420649 --predictionEnd=3459359 --species=arabidopsis /home/linnasp/GenomeAnalysis_VT2026_Lab/results/03_evaluation/02_BUSCO/busco_6/run_embryophyta_odb10/blast_output/sequences/contig_2_pilon.temp
+2026-04-21 11:56:15 DEBUG:busco.busco_tools.Toolset	cmd call: augustus --codingseq=1 --proteinprofile=/sw/data/local/BUSCO_Data/v5/lineages/embryophyta_odb10/prfl/77611at3193.prfl --predictionStart=3421783 --predictionEnd=3460466 --species=arabidopsis /home/linnasp/GenomeAnalysis_VT2026_Lab/results/03_evaluation/02_BUSCO/busco_6/run_embryophyta_odb10/blast_output/sequences/contig_2_pilon.temp
+2026-04-21 11:56:30 DEBUG:busco.busco_tools.Toolset	cmd call: augustus --codingseq=1 --proteinprofile=/sw/data/local/BUSCO_Data/v5/lineages/embryophyta_odb10/prfl/85842at3193.prfl --predictionStart=3421921 --predictionEnd=3460550 --species=arabidopsis /home/linnasp/GenomeAnalysis_VT2026_Lab/results/03_evaluation/02_BUSCO/busco_6/run_embryophyta_odb10/blast_output/sequences/contig_2_pilon.temp
+2026-04-21 11:56:30 DEBUG:busco.busco_tools.Toolset	cmd call: augustus --codingseq=1 --proteinprofile=/sw/data/local/BUSCO_Data/v5/lineages/embryophyta_odb10/prfl/99652at3193.prfl --predictionStart=1287547 --predictionEnd=1350957 --species=arabidopsis /home/linnasp/GenomeAnalysis_VT2026_Lab/results/03_evaluation/02_BUSCO/busco_6/run_embryophyta_odb10/blast_output/sequences/contig_45_pilon.temp
+2026-04-21 11:56:40 DEBUG:busco.busco_tools.Toolset	cmd call: augustus --codingseq=1 --proteinprofile=/sw/data/local/BUSCO_Data/v5/lineages/embryophyta_odb10/prfl/56051at3193.prfl --predictionStart=3420622 --predictionEnd=3458654 --species=arabidopsis /home/linnasp/GenomeAnalysis_VT2026_Lab/results/03_evaluation/02_BUSCO/busco_6/run_embryophyta_odb10/blast_output/sequences/contig_2_pilon.temp
+2026-04-21 11:56:48 DEBUG:busco.busco_tools.Toolset	cmd call: augustus --codingseq=1 --proteinprofile=/sw/data/local/BUSCO_Data/v5/lineages/embryophyta_odb10/prfl/18614at3193.prfl --predictionStart=911866 --predictionEnd=973654 --species=arabidopsis /home/linnasp/GenomeAnalysis_VT2026_Lab/results/03_evaluation/02_BUSCO/busco_6/run_embryophyta_odb10/blast_output/sequences/contig_5_pilon.temp
+2026-04-21 11:56:51 DEBUG:busco.busco_tools.Toolset	cmd call: augustus --codingseq=1 --proteinprofile=/sw/data/local/BUSCO_Data/v5/lineages/embryophyta_odb10/prfl/59621at3193.prfl --predictionStart=3422482 --predictionEnd=3460310 --species=arabidopsis /home/linnasp/GenomeAnalysis_VT2026_Lab/results/03_evaluation/02_BUSCO/busco_6/run_embryophyta_odb10/blast_output/sequences/contig_2_pilon.temp
+2026-04-21 11:57:03 DEBUG:busco.busco_tools.Toolset	cmd call: augustus --codingseq=1 --proteinprofile=/sw/data/local/BUSCO_Data/v5/lineages/embryophyta_odb10/prfl/52234at3193.prfl --predictionStart=507123 --predictionEnd=544145 --species=arabidopsis /home/linnasp/GenomeAnalysis_VT2026_Lab/results/03_evaluation/02_BUSCO/busco_6/run_embryophyta_odb10/blast_output/sequences/contig_45_pilon.temp
+2026-04-21 11:57:15 DEBUG:busco.busco_tools.Toolset	cmd call: augustus --codingseq=1 --proteinprofile=/sw/data/local/BUSCO_Data/v5/lineages/embryophyta_odb10/prfl/19402at3193.prfl --predictionStart=507210 --predictionEnd=543902 --species=arabidopsis /home/linnasp/GenomeAnalysis_VT2026_Lab/results/03_evaluation/02_BUSCO/busco_6/run_embryophyta_odb10/blast_output/sequences/contig_45_pilon.temp
+2026-04-21 11:57:31 DEBUG:busco.busco_tools.Toolset	cmd call: augustus --codingseq=1 --proteinprofile=/sw/data/local/BUSCO_Data/v5/lineages/embryophyta_odb10/prfl/15419at3193.prfl --predictionStart=4418354 --predictionEnd=4448613 --species=arabidopsis /home/linnasp/GenomeAnalysis_VT2026_Lab/results/03_evaluation/02_BUSCO/busco_6/run_embryophyta_odb10/blast_output/sequences/contig_2_pilon.temp
+2026-04-21 11:57:37 DEBUG:busco.busco_tools.Toolset	cmd call: augustus --codingseq=1 --proteinprofile=/sw/data/local/BUSCO_Data/v5/lineages/embryophyta_odb10/prfl/1073at3193.prfl --predictionStart=3314487 --predictionEnd=3342503 --species=arabidopsis /home/linnasp/GenomeAnalysis_VT2026_Lab/results/03_evaluation/02_BUSCO/busco_6/run_embryophyta_odb10/blast_output/sequences/contig_2_pilon.temp
