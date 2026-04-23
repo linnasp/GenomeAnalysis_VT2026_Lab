@@ -2,7 +2,7 @@
 #SBATCH -A uppmax2026-1-61
 #SBATCH -p pelle
 #SBATCH -c 2
-#SBATCH -t 00:10:00
+#SBATCH -t 01:00:00
 #SBATCH -J FastQC_RNA
 #SBATCH --mail-type=ALL
 #SBATCH --output=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/01_preprocessing/04_RNA/01_FastQC_RNA/outputfiles/%x.%j.out
@@ -13,7 +13,7 @@
 module load FastQC/0.12.1-Java-17
 
 # Output
-out_dir=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/01_preprocessing/04_RNA/01_FastQC_RNA
+out_dir=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/01_preprocessing/04_RNA/01_FastQC_RNA/results
 
 # Your commands
 
