@@ -1,9 +1,10 @@
 #!/bin/bash -l
 #SBATCH -A uppmax2026-1-61
 #SBATCH -p pelle
-#SBATCH -c 2
+#SBATCH -c 1
 #SBATCH -t 12:00:00
 #SBATCH -J trim_RNA
+#SBATCH --mem=16G
 #SBATCH --mail-type=ALL
 #SBATCH --output=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/01_preprocessing/04_RNA/02_Trimmomatic_RNA/outputfiles/%x.%j.out
 #SBATCH --error=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/01_preprocessing/04_RNA/02_Trimmomatic_RNA/errorfiles/%x.%j.err
