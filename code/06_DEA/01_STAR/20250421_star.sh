@@ -14,13 +14,23 @@ module load gcc/6.2.0 star/2.5.2b
 
 # Input 
 PILON_assembly=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/02_assembly/04_Pilon/pilon.fasta
+outputfromTrimmomatic_RNAseq=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/01_preprocessing/04_RNA/02_Trimmomatic_RNA/Trimmed_seq
 
 # Output
 out_dir=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/06_DEA/01_STAR/01_run
 
+# Gneome index
 STAR --runThreadN 2 \
 --runMode genomeGenerate \
---genomeDir  \
---genomeFastaFiles /rna.fa \
---sjdbGTFfile \
---sjdbOverhang 
+--genomeDir $out_dir \
+--genomeFastaFiles $PILON_assembly \
+--sjdbGTFfile /path/to/annotations.gtf \
+--sjdbOverhang ReadLength-1
+
+# Mapping
+
+STAR --runThreadN 2 \
+--runMode genomeGenerate \
+--genomeDir $out_dir \
+--readFilesin  \
+--outSAMtype BAM SortedByCoordinate \
