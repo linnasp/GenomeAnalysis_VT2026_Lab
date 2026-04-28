@@ -2,8 +2,8 @@
 #SBATCH -A uppmax2026-1-61
 #SBATCH -p pelle
 #SBATCH -c 2
-#SBATCH -t 00:10:00
-#SBATCH -J test_braker
+#SBATCH -t 24:00:00
+#SBATCH -J 1_braker3
 #SBATCH --mem=32G
 #SBATCH --mail-type=ALL
 #SBATCH --output=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/05_annotation/01_BRAKER3/outputfiles/%x.%j.out
@@ -22,6 +22,8 @@ BRAKER_SIF=/crex/proj/uppmax2026-1-61/Genome_Analysis/2_Zhou_2023/braker3.sif
 # Output
 out_dir=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/05_annotation/01_BRAKER3/results
 temporary_out_dir=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/05_annotation/01_BRAKER3/temporary_files
+
+mkdir -p $out_dir
 
 export TMPDIR=$temporary_out_dir
 
