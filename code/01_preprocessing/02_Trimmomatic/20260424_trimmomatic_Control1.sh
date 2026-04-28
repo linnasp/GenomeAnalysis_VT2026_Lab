@@ -3,7 +3,7 @@
 #SBATCH -p pelle
 #SBATCH -c 1
 #SBATCH -t 00:30:00
-#SBATCH -J trimmomatic_RNA_control_1
+#SBATCH -J control_1_trimmomatic_RNA
 #SBATCH --mail-type=ALL
 #SBATCH --output=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/01_preprocessing/04_RNA/02_Trimmomatic_RNA/outputfiles/%x.%j.out
 #SBATCH --error=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/01_preprocessing/04_RNA/02_Trimmomatic_RNA/errorfiles/%x.%j.err
