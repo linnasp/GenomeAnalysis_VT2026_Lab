@@ -2,7 +2,7 @@
 #SBATCH -A uppmax2026-1-61
 #SBATCH -p pelle
 #SBATCH -c 2
-#SBATCH -t 00:10:00
+#SBATCH -t 01:00:00
 #SBATCH -J FastQC_trimmed_RNA
 #SBATCH --mail-type=ALL
 #SBATCH --output=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/01_preprocessing/04_RNA/03_FastQC_post_trim_RNA/outputfiles/%x.%j.out
@@ -11,8 +11,10 @@
 module load FastQC/0.12.1-Java-17
 
 in_dir=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/01_preprocessing/04_RNA/02_Trimmomatic_RNA/Trimmed_seq
-out_dir=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/01_preprocessing/04_RNA/03_FastQC_post_trim_RNA/testrun
+out_dir=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/01_preprocessing/04_RNA/03_FastQC_post_trim_RNA/results_post_trim
+
+mkdir -p $out_dir
 
 fastqc -t 2 \
 -o $out_dir \
-${in_dir}/*paired.fq.gz
+${in_dir}/*_f_paired.fq.gz ${in_dir}/*_r_paired.fq.gz
