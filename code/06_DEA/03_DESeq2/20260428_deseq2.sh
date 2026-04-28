@@ -9,11 +9,8 @@
 #SBATCH --output=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/06_DEA/03_DESeq2/outputfiles/%x.%j.out
 #SBATCH --error=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/06_DEA/03_DESeq2/errorfiles/%x.%j.err
 
+module load R/4.4.2-gfbf-2024a
 module load R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2
 module load DESeq2/1.46.0
 
-# Input 
-
-
-# Output
-out_dir=
+Rscript 

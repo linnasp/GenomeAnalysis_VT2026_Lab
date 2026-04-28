@@ -3,7 +3,7 @@
 #SBATCH -p pelle
 #SBATCH -c 2
 #SBATCH -t 24:00:00
-#SBATCH -J 1_braker3
+#SBATCH -J 2_braker3
 #SBATCH --mem=32G
 #SBATCH --mail-type=ALL
 #SBATCH --output=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/05_annotation/01_BRAKER3/outputfiles/%x.%j.out
@@ -36,6 +36,6 @@ singularity exec \
         --genome=$softmask \
         --bam $RNA_Seq \
         --workingdir=$out_dir \
-        --species=linnasp_Njap \
+        --species=linnasp_N_jap \
         --softmasking \
         --prot_seq=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/05_annotation/01_BRAKER3/protein_evidence/Viridiplantae_filtered.fa
