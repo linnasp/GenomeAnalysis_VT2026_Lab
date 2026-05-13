@@ -13,4 +13,4 @@ module load R/4.4.2-gfbf-2024a
 module load R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2
 module load DESeq2/1.46.0
 
-Rscript 
+Rscript /home/linnasp/GenomeAnalysis_VT2026_Lab/code/06_DEA/03_DESeq2/20260428_deseq2.R
