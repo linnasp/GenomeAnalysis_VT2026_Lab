@@ -15,7 +15,7 @@ GTF format
 module load Subread/2.1.1-GCC-13.3.0
 
 # Input 
-hisat2= bam file
+hisat_dir=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/06_DEA/01_HISAT2/results
 braker3= gtf file
 
 # Output
@@ -27,5 +27,5 @@ featureCounts -T 2 \
     -t exon \
     -g gene_id \
     -o $out_dir/counts.txt \
-    $hisat2/*.sorted.bam
+    $hisat_dir/*_sorted.bam
 
