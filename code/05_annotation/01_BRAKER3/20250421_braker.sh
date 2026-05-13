@@ -3,12 +3,14 @@
 #SBATCH -p pelle
 #SBATCH -c 2
 #SBATCH -t 24:00:00
-#SBATCH -J 2_braker3
-#SBATCH --mem=32G
+#SBATCH -J 4_braker3
+#SBATCH --mem=128G
 #SBATCH --mail-type=ALL
 #SBATCH --output=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/05_annotation/01_BRAKER3/outputfiles/%x.%j.out
 #SBATCH --error=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/05_annotation/01_BRAKER3/errorfiles/%x.%j.err
 
+module load SAMtools/1.21.1-GCC-13.3.0
+module load SRA-Toolkit/3.2.1-gompi-2024a
 module load BRAKER/3.0.8-foss-2024a
 
 export AUGUSTUS_CONFIG_PATH=/home/linnasp/bin/augustus_config
@@ -29,6 +31,7 @@ export TMPDIR=$temporary_out_dir
 
 singularity exec \
     -B /home/linnasp:/home/linnasp \
+    --env AUGUSTUS_CONFIG_PATH=/home/linnasp/bin/augustus_config \
     -B /crex/proj/uppmax2026-1-61:/crex/proj/uppmax2026-1-61 \
     -B $AUGUSTUS_CONFIG_PATH:/opt/Augustus/config \
     $BRAKER_SIF braker.pl \
@@ -36,6 +39,7 @@ singularity exec \
         --genome=$softmask \
         --bam $RNA_Seq \
         --workingdir=$out_dir \
-        --species=linnasp_N_jap \
+        --species=linnasp_N_jap_4 \
         --softmasking \
-        --prot_seq=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/05_annotation/01_BRAKER3/protein_evidence/Viridiplantae_filtered.fa
+        --prot_seq=/home/linnasp/GenomeAnalysis_VT2026_Lab/results/05_annotation/01_BRAKER3/protein_evidence/Viridiplantae_filtered.fa \
+        --min_contig 5000 \
